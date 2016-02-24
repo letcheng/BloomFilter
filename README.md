@@ -6,7 +6,7 @@ Bloom Filter &amp;&amp; Count Bloom Filter &amp;&amp; Cached Bloom Filter
 
 - 一个Bloom Filter的Java实现，采用Java的散列机制
 
-- 与Google Guava的性能有差差距：
+- 与Google Guava的性能有些差距，有时间再优化：
 
   + Ruyu Bloom Filter添加元素: 0.943s, 53022.269353128315 元素/s
   + Google Bloom Filter添加元素: 0.513s, 97465.88693957115 元素/s
