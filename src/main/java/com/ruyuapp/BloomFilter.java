@@ -21,7 +21,7 @@ public class BloomFilter<E>{
     protected int n; // Bloom Filter实际元素的个数
     protected int k; // hash函数的个数
 
-    public static final Charset charset = Charset.forName("UTF-8"); // encoding used for storing hash values as strings
+    public static final Charset charset = Charset.forName("UTF-8");
 
     //在大多数情况下MD5准确率较好，也可以选择SHA1
     public static final String hashName = "MD5";
