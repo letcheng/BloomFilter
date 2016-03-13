@@ -16,7 +16,7 @@ import java.util.Random;
  */
 public class BloomFilterTest {
 
-    private int total = 50000; //测试元素的总数
+    private int total = 100000; //测试元素的总数
 
     private List<String> existingElements = null;
     private List<String> nonExistingElements = null;
@@ -32,16 +32,12 @@ public class BloomFilterTest {
         final Random r = new Random();
         existingElements = new ArrayList(total);
         for (int i = 0; i < total; i++) {
-            byte[] b = new byte[200];
-            r.nextBytes(b);
-            existingElements.add(new String(b));
+            existingElements.add(Double.toString(r.nextDouble()));
         }
 
         nonExistingElements = new ArrayList(total);
         for (int i = 0; i < total; i++) {
-            byte[] b = new byte[200];
-            r.nextBytes(b);
-            nonExistingElements.add(new String(b));
+            nonExistingElements.add(Double.toString(r.nextDouble()));
         }
 
     }
@@ -71,6 +67,7 @@ public class BloomFilterTest {
         end = System.currentTimeMillis();
         printStat(start, end);
 
+        //测试已经存在的元素
         System.out.print("Ruyu Bloom Filter测试已经存在的元素: ");
         start = System.currentTimeMillis();
         for (int i = 0; i < total; i++) {
@@ -87,7 +84,7 @@ public class BloomFilterTest {
         end = System.currentTimeMillis();
         printStat(start, end);
 
-
+        //测试不存在的元素
         System.out.print("Ruyu Bloom Filter 测试不存在的元素: ");
         start = System.currentTimeMillis();
         for (int i = 0; i < total; i++) {
@@ -108,7 +105,26 @@ public class BloomFilterTest {
 
     @Test
     public void test2(){
-        CachedBloomFilter<String> cbf = new CachedBloomFilter<String>(0.01,100);
+
+        int count = 0;
+
+        CachedBloomFilter<String> cbf = new CachedBloomFilter<String>(0.01,total);
+        //BloomFilter<String> bf = new BloomFilter<String>(0.01,total);
+
+        existingElements.forEach(x->{
+            cbf.add(x);
+            //bf.add(x);
+        });
+
+        for (int i = 0; i < total; i++) {
+           if(!cbf.contains(existingElements.get(i))){
+                count++;
+            };
+            /*if(!bf.contains(existingElements.get(i))){
+                count++;
+            };*/
+        }
+        System.out.println(count);
     }
 
 }

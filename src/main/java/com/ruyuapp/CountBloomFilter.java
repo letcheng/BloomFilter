@@ -9,7 +9,7 @@ package com.ruyuapp;
 public class CountBloomFilter<E> extends BloomFilter<E> {
 
     protected int count[];
-
+    protected int c_m = 0; // 当前使用的位数
     public CountBloomFilter(int m,int n_max,int k){
         super(m,n_max,k);
         this.count = new int[super.m];
@@ -20,12 +20,14 @@ public class CountBloomFilter<E> extends BloomFilter<E> {
         this.count = new int[super.m];
     }
 
-
     @Override
     public void add(byte[] bytes) {
         int[] hashes = createHashes(bytes, k);
         for (int hash : hashes) {
             bitset.set(Math.abs(hash % m), true); //使用K个Hash函数映射到1位
+            if(count[Math.abs(hash % m)]==0){
+                c_m++;
+            }
             count[Math.abs(hash % m)] ++;
         }
         n++;//添加了一个元素
@@ -36,7 +38,9 @@ public class CountBloomFilter<E> extends BloomFilter<E> {
      * @param element
      */
     public void remove(E element) {
-        remove(element.toString().getBytes(charset));
+        if(element!=null){
+            remove(element.toString().getBytes(charset));
+        }
     }
 
     /**
@@ -47,9 +51,16 @@ public class CountBloomFilter<E> extends BloomFilter<E> {
         int[] hashes = createHashes(bytes, k);
         for (int hash : hashes) {
             if(--count[Math.abs(hash % m)] == 0){ //如果数据为空，则将标志位也归位
+                c_m --;
                 bitset.clear(Math.abs(hash % m));
             }
         }
+        n--;
+    }
+    @Override
+    public void clear() {
+        this.count = new int[super.m];
+        super.clear();
     }
 
     public int[] getCount(){
