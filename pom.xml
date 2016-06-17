@@ -10,8 +10,8 @@
 
     <repositories>
         <repository>
-            <id>maven-repository</id>
-            <url>https://raw.github.com/letcheng/extractor/master</url>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
         </repository>
     </repositories>
 

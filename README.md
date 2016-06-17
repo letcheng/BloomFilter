@@ -1,5 +1,6 @@
 ## BloomFilter
 [![Build Status](https://travis-ci.org/letcheng/BloomFilter.svg?branch=master)](https://travis-ci.org/letcheng/BloomFilter)
+[![Release](https://jitpack.io/v/letcheng/BloomFilter.svg)](https://jitpack.io/#letcheng/BloomFilter)
 
 Bloom Filter &amp;&amp; Count Bloom Filter &amp;&amp; Cached Bloom Filter
 
@@ -8,6 +9,7 @@ Bloom Filter &amp;&amp; Count Bloom Filter &amp;&amp; Cached Bloom Filter
 - 原理 
  
  ![image](https://github.com/letcheng/BloomFilter/raw/master/src/main/resources/bloom-filter.JPG)
+
 
 - 性能
   + 添加元素: 0.943s, 53022.269353128315 元素/s
