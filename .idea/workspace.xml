@@ -63,8 +63,8 @@
       <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24203822">
-              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.12101911">
+              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -695,7 +695,7 @@
       <workItem from="1459582258833" duration="2232000" />
       <workItem from="1459594164337" duration="31000" />
       <workItem from="1460448879278" duration="617000" />
-      <workItem from="1466144861851" duration="4456000" />
+      <workItem from="1466144861851" duration="4541000" />
     </task>
     <task id="LOCAL-00001" summary="修改 cached bloom filter">
       <created>1457867886664</created>
@@ -769,11 +769,17 @@
       <option name="project" value="LOCAL" />
       <updated>1466148864164</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="添加 CI">
+      <created>1466149332233</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1466149332233</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77411000" />
+    <option name="totallyTimeSpent" value="77496000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1129,8 +1135,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24203822">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.12101911">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
           <folding />
         </state>
       </provider>
