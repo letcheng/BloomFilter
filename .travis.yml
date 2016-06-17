@@ -1,3 +1,6 @@
 language: java
+jdk:
+  - oraclejdk8
 service_name: travis-pro
 repo_token: f2DYjmPCF7g2YPkGMqrJvDuXx31CTBA2z
+mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
