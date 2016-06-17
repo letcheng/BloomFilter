@@ -1,6 +1,6 @@
 # BloomFilter
 Bloom Filter &amp;&amp; Count Bloom Filter &amp;&amp; Cached Bloom Filter
-
+[![Build Status](https://travis-ci.org/letcheng/BloomFilter.svg?branch=master)](https://travis-ci.org/letcheng/BloomFilter)
 
 ## Bloom Filter
 
