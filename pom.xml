@@ -6,7 +6,14 @@
 
     <groupId>cn.edu.hhu</groupId>
     <artifactId>BloomFilter</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
+
+    <repositories>
+        <repository>
+            <id>maven-repository</id>
+            <url>https://raw.github.com/letcheng/extractor/master</url>
+        </repository>
+    </repositories>
 
     <dependencies>
         <dependency>

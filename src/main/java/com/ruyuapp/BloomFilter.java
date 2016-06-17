@@ -58,6 +58,8 @@ public class BloomFilter<E>{
         this.k = k;
         this.m = m;
         this.c = 1.0d * m / n_max;
+        n = 0;
+        this.bitset = new BitSet(m);
     }
 
     /**
