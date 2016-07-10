@@ -22,4 +22,4 @@ Bloom Filter &amp;&amp; Count Bloom Filter &amp;&amp; Cached Bloom Filter
   
    ![image](https://github.com/letcheng/BloomFilter/raw/master/src/main/resources/cached-bloom-filter.JPG)
   
-- 可以进行高效缓存替换的Bloom Filter数据结构，可以应用于爬虫的URL去重中，在以雪球爬行策略过程中，一个爬虫线程在一定时间范围内遇到的链接集中在一个URL集合中的。这时可以采用CachedBloomFilter数据结构。
+> 可以进行高效缓存替换的Bloom Filter数据结构，可以应用于爬虫的URL去重中，在以雪球爬行策略过程中，一个爬虫线程在一定时间范围内遇到的链接集中在一个URL集合中的。这时可以采用CachedBloomFilter数据结构。
